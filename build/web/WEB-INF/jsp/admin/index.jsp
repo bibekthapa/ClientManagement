@@ -50,13 +50,13 @@
            </td>
            <td>
                
-               <a href="footer.jsp" class="btn btn-success">
+               <a href="${SITE_URL}/admin/client/edit/${client.id}" class="btn btn-success">
                    <span class="glyphicon glyphicon-pencil" ></span>
                </a>              
                <label>  </label>
                <label>  </label>
               
-               <a href="header.jsp" class="btn btn-danger">
+               <a href="${SITE_URL}/admin/client/delete/${client.id}" class="btn btn-danger" onclick="return confirm('Are you sure to Delete')">
                <span class="glyphicon glyphicon-trash"></span>
                </a>
               

@@ -1,27 +1,27 @@
 <%@include file="../header.jsp"%>
 
-<h1> Add Client </h1>
+<h1> Edit Client </h1>
 
-<form method="post" action="${SITE_URL}/admin/client/save">
+<form method="post" action="${SITE_URL}/admin/client/save" >
     
     <div class="form-group">
     <label>Name</label>
-    <input name="name" required="required" type="text" class="form-control" />
+    <input name="name" required="required" type="text" class="form-control" value="${client.name}" />
     </div>
     <br/>
     <div class="form-group">
     <label>Email</label>
-    <input name="email" required="required" type="email" class="form-control"/>
+    <input name="email" required="required" type="email" class="form-control" value="${client.email}"/>
     </div>
     <br/>
     <div class="form-group">
     <label>Contact No</label>
-    <input name="contactNo" required="required" class="form-control" />
+    <input name="contactNo" required="required" class="form-control" value="${client.contactNo}" />
     </div>
     <br/>
     <div class="checkbox">
     <label>Status</label> 
-    <label> <input type="checkbox" name="status" <c:if test="unchecked">${client.setStatus=false}</c:if> >Active</label>
+    <label> <input type="checkbox" name="status" <c:if test="${client.status}">checked="checked"</c:if> >Active</label>
     </div>
     <br/>
     <div>
