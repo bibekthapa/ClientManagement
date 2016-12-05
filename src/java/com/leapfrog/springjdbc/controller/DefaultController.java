@@ -11,6 +11,6 @@ public class DefaultController {
     @RequestMapping(method=RequestMethod.GET)
     public String index()
     {
-        return "index";
+        return "/admin/client/add";
     }
 }
