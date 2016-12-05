@@ -21,7 +21,10 @@
     <br/>
     <div class="checkbox">
     <label>Status</label> 
-    <label> <input type="checkbox" name="status" <c:if test="unchecked">${client.setStatus=false}</c:if> >Active</label>
+    <label> 
+       
+        <input type="checkbox" name="status" id="status"  
+       />Active</label>
     </div>
     <br/>
     <div>

@@ -12,9 +12,12 @@ public class Client {
     private String name,email;
       private String  contactNo;
     private Date addedDate;
-    private Boolean status;
-
-    public Client(int id, String name, String email, String contactNo, Boolean status) {
+    private boolean status;
+    
+    // Previously i was writing datatype of status as Boolean which is of object type 
+//When i changed the datatype to the primitive one i.e. boolean then the value is also added in inactive status
+    //previously value was added in only active status
+    public Client(int id, String name, String email, String contactNo, boolean status) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -69,7 +72,7 @@ public class Client {
         return status;
     }
 
-    public void setStatus(Boolean status) {
+    public void setStatus(boolean status) {
         this.status = status;
     }
     

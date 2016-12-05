@@ -73,7 +73,7 @@ public class ClientDAOImpl implements ClientDAO {
     @Override
     public int update(Client c) throws SQLException,ClassNotFoundException {
 
-        String sql="UPDATE  tbl_clients set name=?,email=?,contact_no=?,status=? WHERE client_id=?";
+        String sql="UPDATE tbl_clients set name=?,email=?,contact_no=?,status=? WHERE client_id=?";
         return jdbcTemplate.update(sql, new Object[]{c.getName(),c.getEmail(),c.getContactNo(),c.getStatus(),c.getId()});
     }
 

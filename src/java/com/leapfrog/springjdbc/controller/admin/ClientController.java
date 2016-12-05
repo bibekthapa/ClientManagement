@@ -27,8 +27,12 @@ public class ClientController {
     public String index(Model model) {
         try {
             model.addAttribute("clients", clientDAO.getALL());
-        } catch (Exception e) {
+        } catch (SQLException e) {
             e.getMessage();
+        }
+        catch(ClassNotFoundException i)
+        {
+            i.getMessage();
         }
         return "admin/index";
     }
